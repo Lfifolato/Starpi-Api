@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "empresas",
+  "info": {
+    "name": "Empresa"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Nome": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "DDD": {
+      "type": "string",
+      "unique": false,
+      "required": true
+    },
+    "ti": {
+      "collection": "ti",
+      "via": "empresa"
+    }
+  }
+}
